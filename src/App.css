@@ -1,0 +1,301 @@
+/* Navigation bar */
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    min-height: 65px;
+    padding: 10px 25px;
+    background-color: #eeeeee;
+    border-top: 5px solid #ff5252;
+    box-sizing: border-box;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 22px;
+    color: #222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.search-bar {
+    flex: 1;
+    min-width: 0;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    color: #222;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-links button:hover {
+    background-color: #ddd;
+}
+
+.nav-links a:hover {
+    color: #ff5252;
+}
+
+/* Signup page */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 20px;
+    min-height: 450px;
+}
+
+.auth-box {
+    width: 100%;
+    max-width: 550px;
+    padding: 25px;
+    border: 1px solid #9bbde9;
+    box-sizing: border-box;
+}
+
+.auth-box h2 {
+    text-align: center;
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.auth-box label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.auth-box input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+}
+
+.auth-button {
+    display: block;
+    width: 65%;
+    margin: 25px auto 10px;
+    padding: 10px;
+    border: none;
+    background-color: #4285f4;
+    color: white;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+    }
+
+    .search-bar {
+        order: 3;
+        flex-basis: 100%;
+    }
+
+    .auth-container {
+        padding: 25px 15px;
+    }
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+}
+
+
+
+
+/* New Post page*/ 
+
+.post-container {
+    max-width: 900px;
+    margin: 35px auto;
+    padding: 0;
+    background: white;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.post-heading,
+.post-section-heading {
+    background: #dedede;
+    padding: 7px 12px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.post-heading {
+    margin: 0 0 15px;
+}
+
+.post-type {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 15px 5px 28px;
+    font-size: 15px;
+}
+
+.post-type label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.post-type input {
+    margin: 0;
+}
+
+.post-section-heading {
+    margin: 0 0 10px;
+}
+
+.post-instructions {
+    margin: 10px 18px 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.post-instructions span {
+    color: #ed5145;
+}
+
+.post-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 12px;
+}
+
+.post-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.post-field label {
+    font-size: 14px;
+}
+
+.post-field input,
+.post-field textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 0;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: #111;
+}
+
+.post-field input {
+    min-height: 32px;
+}
+
+.post-field textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.post-description textarea {
+    min-height: 350px;
+}
+
+.post-field input:focus,
+.post-field textarea:focus {
+    outline: 1px solid #555;
+}
+
+.post-tags {
+    display: grid;
+    grid-template-columns: 65px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+}
+
+.post-tags input {
+    min-width: 0;
+}
+
+.post-error {
+    color: #c62828;
+    font-size: 14px;
+    margin: 0;
+}
+
+.post-submit {
+    align-self: flex-end;
+    width: 195px;
+    min-height: 38px;
+    border: none;
+    border-radius: 0;
+    background: #a6a6a6;
+    color: #111;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.post-submit:hover {
+    background: #929292;
+}
+
+@media (max-width: 700px) {
+    .post-container {
+        margin: 20px 12px;
+    }
+
+    .post-type {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .post-description textarea {
+        min-height: 220px;
+    }
+
+    .post-tags {
+        grid-template-columns: 1fr;
+    }
+
+    .post-submit {
+        width: 140px;
+    }
+}
